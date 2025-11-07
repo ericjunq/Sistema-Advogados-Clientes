@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{{url_for('static', filename= 'style.css') }}">
+    <title>Sistema</title>
+</head>
+<body>
+    <div class="container">
+        <h1>⚖️ Sistema Jurídico</h1>
+        <p class="subtitle">Escolha como deseja se cadastrar</p>
+        
+        <div class="options">
+            <button class="option-btn" onclick="cadastrarCliente()">
+                <div class="icon">👤</div>
+                <h2>Cliente</h2>
+                <p>Encontre o advogado ideal para o seu caso</p>
+            </button>
+            
+            <button class="option-btn" onclick="cadastrarAdvogado()">
+                <div class="icon">👨‍⚖️</div>
+                <h2>Advogado</h2>
+                <p>Ofereça seus serviços jurídicos</p>
+            </button>
+        </div>
+    </div>
+    <script>
+        function cadastrarCliente() {
+            window.location.href = '/cli-cadastro';
+        }
+
+        function cadastrarAdvogado() {
+            window.location.href = '/adv-cadastro';
+        }
+    </script>
+</body>
+</html>

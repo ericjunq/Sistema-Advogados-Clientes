@@ -1,0 +1,114 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #727374, #2c333f 100%);
+        }
+
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .option-btn {
+            padding: 2rem 1.5rem;
+            border: 2px solid #2c333f;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .option-btn:hover {
+            background: #727374;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .option-btn h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .option-btn p {
+            color: inherit;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #727374 0%, #ababab 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .option-btn:hover .icon {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+            .options {
+                flex-direction: column;
+            }
+            
+            .option-btn {
+                max-width: 100%;
+            }
+        }
