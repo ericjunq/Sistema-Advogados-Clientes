@@ -1,9 +1,14 @@
-function cadastrarCliente() {
-            alert('/adv-cliente');
-            // Aqui você pode adicionar o redirecionamento: window.location.href = 'cadastro-cliente.html';
-        }
+function loginCliente(){
+    window.location.href = '/cli-login';
+}
+function loginAdvogado() {
+     window.location.href = '/adv-login';
+ }
 
-        function cadastrarAdvogado() {
-            alert('/adv-cadastro');
-            // Aqui você pode adicionar o redirecionamento: window.location.href = 'cadastro-advogado.html';
-        }
+ function cadastrarCliente() {
+      window.location.href = '/cli-cadastro';
+} 
+
+ function cadastrarAdvogado() {
+      window.location.href = '/adv-cadastro';
+}

@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename= 'style.css') }}">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Cadastrar Advogado</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Login - Sistema Jurídico{% endblock %}
+
+{% block content %}
+    <h1>🔐 Login</h1>
+    <!-- Corrigido o nome do endpoint -->
+    <form action="{{ url_for('adv_login') }}" method="POST" class="login-form">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <button href="./adv-cadastro.html">Não tenho Conta</button>
+
+        <button type="submit">Entrar</button>
+    </form>
+{% endblock %}
