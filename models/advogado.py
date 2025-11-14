@@ -11,13 +11,14 @@ class Advogado:
 
     @classmethod
     def cadastrar_advogado(cls):
-        nome = input('Digite seu nome: ')
-        email = input('Digite seu E-mail: ')
-        senha = input('Digite sua senha: ')
-        username = input('Digite seu username: ')
-        cpf = input('Digite seu CPF: ')
-        telefone = input('Digite seu número de telefone: ')
-        oab = input('Digite o número de registro da sua OAB: ')
+        nome = input(f'Digite seu nome: ')
+        email = input(f'Digite seu E-mail: ')
+        senha = input(f'Digite sua senha: ')
+        username = input(f'Digite seu username: ')
+        cpf = input(f'Digite seu CPF: ')
+        telefone = input(f'Digite seu número de telefone: ')
+        oab = input(f'Digite o número de registro da sua OAB: ')
 
         advogado = Advogado(nome, email, senha, username, cpf, telefone, oab)
+
         return cls(advogado)
