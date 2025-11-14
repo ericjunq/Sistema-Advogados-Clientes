@@ -1,0 +1,8 @@
+.btn-cadastrar {
+    display: block;
+    text-align: center;
+    background: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}

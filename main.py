@@ -1,4 +1,5 @@
 from flask import Flask
+from database import banco
 
 app = Flask(__name__)
 

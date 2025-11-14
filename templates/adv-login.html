@@ -12,7 +12,8 @@
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha" required>
 
-        <button href="./adv-cadastro.html">Não tenho Conta</button>
+        <a href="{{ url_for('adv_cadastro') }}" class="btn-cadastrar">Não tenho Conta</a>
+
 
         <button type="submit">Entrar</button>
     </form>
