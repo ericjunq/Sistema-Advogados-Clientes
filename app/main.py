@@ -4,7 +4,7 @@ from database import banco
 app = Flask(__name__)
 
 
-from routes import routes
+from routes import *
 
 
 if __name__ == "__main__":
