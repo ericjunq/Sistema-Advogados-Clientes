@@ -5,16 +5,17 @@
 {% block content %}
     <h1>🔐 Login</h1>
     <!-- Corrigido o nome do endpoint -->
-    <form action="{{ url_for('adv_login') }}" method="POST" class="login-form">
+    <form action="{{ url_for('routes.adv_login') }}" method="POST" class="login-form">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" required>
 
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha" required>
 
-        <a href="{{ url_for('adv_cadastro') }}" class="btn-cadastrar">Não tenho Conta</a>
+        <a href="{{ url_for('routes.adv_cadastro') }}" class="btn-cadastrar">Não tenho Conta</a>
 
-
-        <button type="submit">Entrar</button>
+        <button class="submit" onclick="contatos()">
+                <h2>Entrar</h2>
+            </button>
     </form>
 {% endblock %}

@@ -1,0 +1,180 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 645px;
+            background-color: #3a3a3a;
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h1 {
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 50px 16px 20px;
+            border: 2px solid #808080;
+            border-radius: 30px;
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box input::placeholder {
+            color: #999;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+
+        .contacts-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .contact-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .avatar {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .avatar-icon {
+            width: 45px;
+            height: 45px;
+            background-color: #b0b0b0;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .avatar-icon::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 30px;
+            background-color: #b0b0b0;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .contact-name {
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .main-content {
+            flex: 1;
+            background: linear-gradient(135deg, #6b7a8f 0%, #4a5568 100%);
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .main-search {
+            position: relative;
+            width: 100%;
+            max-width: 680px;
+        }
+
+        .main-search input {
+            width: 100%;
+            padding: 20px 70px 20px 70px;
+            border: 3px solid white;
+            border-radius: 35px;
+            background-color: transparent;
+            color: white;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .main-search input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .main-search .search-icon-main {
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            color: white;
+        }
+
+        .main-search .close-icon {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #666;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #888;
+        }

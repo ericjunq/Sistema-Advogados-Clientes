@@ -1,6 +1,7 @@
 import sqlite3
-from models.cliente import Cliente
-from models.advogado import Advogado
+from Backend.models.cliente import Cliente
+from Backend.models.advogado import Advogado
+
 
 DB_PATH = 'banco.db'
 

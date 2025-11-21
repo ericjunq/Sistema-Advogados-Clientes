@@ -12,3 +12,7 @@ function loginAdvogado() {
  function cadastrarAdvogado() {
       window.location.href = '/adv-cadastro';
 }
+
+function contatos(){
+    window.location.href = '/contatos';
+}

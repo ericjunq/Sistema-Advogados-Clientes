@@ -1,14 +1,18 @@
-from main import app
-from flask import render_template, request, redirect, url_for, flash, session
-from models.advogado import Advogado
-from models.cliente import Cliente
 
-@app.route("/")
+from flask import Blueprint, render_template, request, redirect, url_for, flash, session
+from Backend.models.advogado import Advogado
+from Backend.models.cliente import Cliente
+from Backend.routes.contatos import rota2_bp as routes_bp
+
+
+rota1_bp = Blueprint("routes", __name__)
+
+@rota1_bp.route("/")
 def homepage():
     return render_template("homepage.html")
 
 # Login
-@app.route("/adv-login", methods=['GET','POST'])
+@rota1_bp.route("/adv-login", methods=['GET','POST'])
 def adv_login():
 
     if request.method == 'POST':
@@ -23,13 +27,13 @@ def adv_login():
             session['advogado_nome'] = advogado.nome
             session['user_type'] = 'advogado'
             flash('Login realizado com sucesso!', 'success')
-            return redirect(url_for('homepage')) 
+            return redirect(url_for('contatos.contatos')) 
         else:
             flash('Email ou senha incorretos!', 'error')
     return render_template("adv-login.html")
 
 
-@app.route("/cli-login", methods=['GET', 'POST'])
+@rota1_bp.route("/cli-login", methods=['GET', 'POST'])
 def cli_login():
 
     if request.method == 'POST':
@@ -51,7 +55,7 @@ def cli_login():
     return render_template("cli-login.html")
 
 # Cadastro
-@app.route("/adv-cadastro", methods=['GET', 'POST'])
+@rota1_bp.route("/adv-cadastro", methods=['GET', 'POST'])
 def adv_cadastro():
     if request.method == 'POST':
 
@@ -75,7 +79,7 @@ def adv_cadastro():
     
     return render_template("adv-cadastro.html")
 
-@app.route("/cli-cadastro", methods=('GET', 'POST'))
+@rota1_bp.route("/cli-cadastro", methods=('GET', 'POST'))
 def cli_cadastro():
 
     if request.method == 'POST':
