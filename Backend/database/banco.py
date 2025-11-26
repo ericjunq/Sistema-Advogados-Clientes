@@ -1,6 +1,11 @@
 import sqlite3
-from Backend.models.cliente import Cliente
-from Backend.models.advogado import Advogado
+#from Backend.models.cliente import Cliente
+from flask_sqlalchemy import SQLAlchemy
+#from Backend.models.advogado import Advogado
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
 
 
 DB_PATH = 'banco.db'

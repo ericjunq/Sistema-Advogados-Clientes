@@ -59,13 +59,13 @@ def cli_login():
 def adv_cadastro():
     if request.method == 'POST':
 
-        nome = request.form.get == ('nome')
-        email = request.form.get == ('email')
-        senha = request.form.get == ('senha')
-        username = request.form.get == ('username')
-        cpf = request.form.get ==('cpf')
-        telefone = request.form.get == ('telefone')
-        oab = request.form.get == ('oab')
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        senha = request.form.get('senha')
+        username = request.form.get('username')
+        cpf = request.form.get('cpf')
+        telefone = request.form.get('telefone')
+        oab = request.form.get('oab')
 
         advogado = Advogado.cadastrar_advogado_web(
             nome, email, senha, username, cpf, telefone, oab
@@ -84,12 +84,12 @@ def cli_cadastro():
 
     if request.method == 'POST':
          
-          nome = request.form.get == ('nome')
-          email = request.form.get == ('email')
-          senha = request.form.get == ('senha')
-          username = request.form.get == ('username')
-          cpf = request.form.get == ('cpf')
-          telefone = request.form.get == ('telefone')
+          nome = request.form.get ('nome')
+          email = request.form.get('email')
+          senha = request.form.get('senha')
+          username = request.form.get('username')
+          cpf = request.form.get('cpf')
+          telefone = request.form.get('telefone')
 
           cliente = Cliente.cadastrar_cliente_web(
               nome, email, senha, username, cpf, telefone
