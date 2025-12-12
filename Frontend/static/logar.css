@@ -1,8 +1,53 @@
-.btn-cadastrar {
-    display: block;
+
+
+h1 {
     text-align: center;
-    background: #ccc;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
     padding: 10px;
+    margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+a.btn-cadastrar {
+    text-decoration: none;
+    color: #3b82f6;
+    font-size: 1rem;
     margin-top: 10px;
+    display: inline-block;
+}
+
+a.btn-cadastrar:hover {
+    color: #082a61;
+}
+
+/* Estilo do botão de submit */
+button.submit {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+    color: white;
+    border: none;
+
 }

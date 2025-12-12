@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Login - Sistema Jurídico{% endblock %}
-
+ <link rel="stylesheet" href="{{ url_for('static', filename='logar.css') }}">
 {% block content %}
     <h1>🔐 Login</h1>
     <!-- Corrigido o nome do endpoint -->
@@ -12,10 +12,12 @@
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha" required>
 
-        <a href="{{ url_for('routes.adv_cadastro') }}" class="btn-cadastrar">Não tenho Conta</a>
-
         <button class="submit" onclick="contatos()">
                 <h2>Entrar</h2>
             </button>
+
+        <a href="{{ url_for('routes.adv_cadastro') }}" class="btn-cadastrar">Não tenho Conta</a>
+
+        
     </form>
 {% endblock %}
